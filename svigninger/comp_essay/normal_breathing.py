@@ -9,10 +9,12 @@ f_s = samplerate #samplefrekvens [Hz]
 T_full = N_full/f_s #Sampletiden
 dt = 1/f_s
 
+
+
 t_full = np.linspace(0,T_full,N_full)
 
 
-t = t_full[0:-1] #Slicer opp t slik at vi kan fokuserer bare på det ene coo-coo
+t = t_full[0:-1] #Slicer opp t slik at vi kan fokuserer bare på det ene omraade
 x_n = x_n_full[0:-1] #Slicer den også.
 N = t.shape[0]
 T = N/f_s
