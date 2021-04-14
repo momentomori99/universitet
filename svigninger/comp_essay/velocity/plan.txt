@@ -1,0 +1,20 @@
+Planen er å bestemme hastighet til et objekt som sender ut bølger. Disse bølgene (f) 
+kjent. Vi som observatoren obserer bølge (f_m). Vi kan finne relasjone mellom disse
+og finne ut doppler skiftet. Ved å vite i hvilket medium disse bølgene trer, og om 
+det er lys eller lydbølger, kan vi bestemme kildets hastighet og akselerasjon
+
+Observatøren kan motta noe sekvenser men data, altså bølget, gjøre wavelet
+transform, og finne ut observerte frekvenser i gitte dit, vi kan da finne hastighet
+i gitte tider. 
+
+Vi kan deretter gjøre et mer komplisert model hvor vi foreksempel tenker oss at bølgen
+går fra et medium til annen. Støy også kan vi inkludere som vi modellerer en model
+som fjerner disse.
+
+Eventuelle problemstillinger:
+	* Hvordan kan vi lage et effektiv og trygg kommunikasjons navigasjon mellom to 
+	  objekter
+	* Hvordan kan man finne ut hastigheten og info om satelitt når kommunikasjon 
+	  bryter.
+	* Hvordan kan man vite hvor satelittens posisjon og hastighetsretning når
+	  all kommunikasjon er brutt <-- den likte jeg!
