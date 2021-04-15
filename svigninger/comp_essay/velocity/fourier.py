@@ -68,7 +68,7 @@ class Analyse:
         t_ = np.linspace(tmin,tmax,tsteps)
         f_ = np.linspace(fmin,fmax,fsteps)
         T,F = np.meshgrid(t_,f_)
-        K = 10
+        K = 10 
 
         sum = 0
         for i in range(self.N):
