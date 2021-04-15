@@ -1,31 +1,34 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-f = 260
-def func1(t):
+
+def func1(t,f):
     A = 1
-    if t < 0.5:
-        f = 10
-        return A*np.sin(2*np.pi*f*t)
-    if t > 0.5:
-        f = 20
-        return A*np.sin(2*np.pi*f*t)
+    return A*np.sin(2*np.pi*f*t)
 
+T = 1
+f_s = 1000
+N = T*f_s
+dt = T/N
 
+t = np.linspace(0,T,N)
 
-t = np.linspace(0,1,500)
+n = np.zeros(N)
+for i in range(N):
+    if t[i] < 0.5:
+        n[i] = func1(t[i], 5)
+    else:
+        n[i] = func1(t[i], 10)
 
-
-
-
-plt.plot(t, func1(t))
-# # plt.plot(t, func1(t,1))
+print(N)
+plt.plot(t, n)
+plt.show()
+# plt.plot(t, func1(t,1))
 # plt.show()
-#
-# x_n = func1(t)
-#
-# x_k = abs(np.fft.fft(x_n))
-# freq = np.fft.fftfreq(500, 1/500)
-#
-# plt.plot(freq, x_k)
-# plt.show()
+
+
+x_k = abs(np.fft.fft(n))
+freq = np.fft.fftfreq(N, dt)
+
+plt.plot(freq, x_k)
+plt.show()

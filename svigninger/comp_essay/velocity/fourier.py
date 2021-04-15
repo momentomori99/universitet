@@ -3,26 +3,25 @@ import matplotlib.pyplot as plt
 from scipy.io import wavfile
 
 class Analyse:
-    def __init__(self, filename):
+    def __init__(self):
         def func1(t,f):
+            A = 1
+            return A*np.sin(2*np.pi*f*t)
 
-            return np.cos(f*2*np.pi*t)
+        self.T = 10
+        self.f_s = 100
+        self.N = self.f_s * self.T
+        self.dt = 1/self.N
+        self.t = np.linspace(0,self.T,self.N)
 
-        t = np.linspace(0,10,500)
-        data = np.zeros(len(t))
-        for i in range(len(t)):
-            if t[i] < 4:
-                f = 10
+        data = np.zeros(self.N)
+        for i in range(self.N):
+            if self.t[i] < 5:
+                data[i] = func1(self.t[i], 5)
             else:
-                f = 100
-
-            data[i] = func1(t[i],f)
+                data[i] = func1(self.t[i], 10)
 
         self.x_n = data[:]
-        self.N = data.shape[0]
-        self.T = 10
-        self.dt = 1/self.N
-        self.t = t
 
 
 
@@ -69,11 +68,11 @@ class Analyse:
         t_ = np.linspace(tmin,tmax,tsteps)
         f_ = np.linspace(fmin,fmax,fsteps)
         T,F = np.meshgrid(t_,f_)
-        K = 5
+        K = 10
 
         sum = 0
         for i in range(self.N):
-            sum = sum + np.conj(self.n_xnew[i]*(wavelet(F, K, T, self.t[i])))
+            sum = sum + np.conj(self.x_n[i]*(wavelet(F, K, T, self.t[i])))
         Z = abs(sum)
         plt.contourf(T,F,Z)
         plt.grid(True)
@@ -84,6 +83,7 @@ class Analyse:
         plt.show()
 
 if __name__ == '__main__':
-    ins = Analyse('normal_breathing2.wav')
+    ins = Analyse()
     ins.soundplot()
     ins.fourier_transform()
+    ins.wavelet_analyse(0,10,1000,0,20,50)
