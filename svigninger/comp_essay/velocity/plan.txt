@@ -18,3 +18,8 @@ Eventuelle problemstillinger:
 	  bryter.
 	* Hvordan kan man vite hvor satelittens posisjon og hastighetsretning når
 	  all kommunikasjon er brutt <-- den likte jeg!
+
+
+system2:
+	* oppgradere koden slik at det viser plots og sånt for de to observatørene
+	* 

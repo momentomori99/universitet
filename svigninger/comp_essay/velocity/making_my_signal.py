@@ -30,5 +30,13 @@ plt.show()
 x_k = abs(np.fft.fft(n))
 freq = np.fft.fftfreq(N, dt)
 
-plt.plot(freq, x_k)
-plt.show()
+# plt.plot(freq, x_k)
+# plt.show()
+
+R1 = [3.972, 3.956, 3.960]
+R2 = [3.962, 3.963, 3.962]
+
+R1_error = np.std(R1)/3
+R2_error = np.std(R2)/3
+print(R1_error)
+print(R2_error)
