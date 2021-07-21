@@ -1,0 +1,10 @@
+* Oblig 9, oppgave 1d
+	Jeg lurer hvorfor er det bare total energi, angulærmoment kvadrert
+	og ang. moment i z-retningen som har skarpe verdier. Hvorfor har ikke
+	f.eks posisjon og bevegelsesmengde skarpe verdier? Kanskje jeg 
+	missfortår begrepet skarpe verdier, men betyr det ikke bare at
+	ved å måle en observabel, kan vi få et presis "tall", altså verdi.
+	
+	Har dette noe med inkompetible observablene å gjøre? For L_z og L² 
+	og E kommuterer. 
+
