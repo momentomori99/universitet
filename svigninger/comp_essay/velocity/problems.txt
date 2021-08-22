@@ -1,4 +1,0 @@
-problemer som jeg burde nevne i comp essayen min:
-
-	Critical angle problem: husk at det er ingen kritisk angle når man
-	går fra lav index til høy index, bare når du går fra høy indec til lav
